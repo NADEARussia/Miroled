@@ -1,112 +1,49 @@
-/* Общие стили */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    text-align: center;
-    overflow-x: hidden;
-}
-
-/* Видеозаставка */
-#splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-#splash-screen video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Шапка */
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Главная страница */
-section {
-    padding: 50px;
-}
-
-h2 {
-    font-size: 28px;
+    background-image: url('images/background.jpg');
+    background-size: cover;
     color: #333;
 }
 
-p {
-    font-size: 18px;
-    color: #666;
+.intro {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background: #555;
-}
-
-/* Категории зеркал */
-.category {
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    list-style-type: none;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px;
 }
 
-.category a {
-    padding: 15px 25px;
-    background: #007BFF;
-    color: white;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
 }
 
-.category a:hover {
-    background: #0056b3;
+section {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #ccc;
 }
