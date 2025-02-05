@@ -3,50 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiroLED - Тестовая версия</title>
+    <title>MiroLED - Зеркала с подсветкой</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <section id="hero">
-        <video autoplay muted loop>
-            <source src="media/20250131_2202_MiroLED Neon Glow_simple_compose_01jjyzaa3nf0tb2tdmjs7aeqm4.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео тег.
+    <!-- Видеозаставка -->
+    <div id="splash-screen">
+        <video autoplay muted playsinline>
+            <source src="video/intro.mp4" type="video/mp4">
         </video>
-    </section>
+    </div>
     
+    <!-- Шапка сайта -->
     <header>
-        <h1>Добро пожаловать в MiroLED</h1>
-        <p>Зеркала с подсветкой и инновационным дизайном</p>
+        <h1>MiroLED - Зеркала с подсветкой</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalog">Зеркала с подсветкой</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <section id="gallery">
-        <h2>Галерея работ</h2>
-        <div class="gallery-container">
-            <img src="media/MiroLED Aura Vega.jpg" alt="MiroLED Aura Vega">
-            <img src="media/MiroLED Eclipse Round.jpg" alt="MiroLED Eclipse Round">
-            <img src="media/Mist.jpg" alt="Mist">
-            <img src="media/Vega.jpg" alt="Vega">
-            <img src="media/MiroLED Mist Vega.jpg" alt="MiroLED Mist Vega">
-            <img src="media/1.jpg" alt="Фото 1">
-            <img src="media/Aura 1000x800.jpg" alt="Aura 1000x800">
-            <img src="media/Elara 1000x600.jpg" alt="Elara 1000x600">
-            <img src="media/MiroLED Aura Round.jpg" alt="MiroLED Aura Round">
+    <!-- Главная страница -->
+    <section id="home">
+        <h2>Добро пожаловать в MiroLED</h2>
+        <p>Мы создаем стильные и современные зеркала с подсветкой.</p>
+        <p>Высокое качество, инновационные технологии и удобство в использовании.</p>
+        <a href="#catalog" class="btn">Перейти в каталог</a>
+    </section>
+    
+    <!-- Каталог товаров -->
+    <section id="catalog">
+        <h2>Категории зеркал</h2>
+        <div class="category">
+            <a href="mirrors-straight.html">Прямые зеркала</a>
+            <a href="mirrors-figured.html">Фигурные зеркала</a>
         </div>
     </section>
     
-    <section id="contact">
-        <h2>Свяжитесь с нами</h2>
-        <p>Email: info@miroled.md</p>
-        <p>Телефон: +37368939303</p>
-        <p>Адрес: ул. Мештер Маноле 20, Кишинёв, Молдова</p>
-        <form action="mailto:miroled.info@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш email" required>
-            <textarea name="message" placeholder="Ваше сообщение"></textarea>
-            <button type="submit">Отправить</button>
-        </form>
+    <!-- О нас -->
+    <section id="about">
+        <h2>О компании MiroLED</h2>
+        <p>Мы разрабатываем зеркала с подсветкой, которые дополняют интерьер и создают уютную атмосферу.</p>
+        <p>Наши изделия отличает качество, долговечность и современный дизайн.</p>
     </section>
     
-    <script src="script.js"></script>
+    <!-- Контакты -->
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Email: miroled.info@gmail.com</p>
+        <p>Телефон: +37368939303</p>
+        <p>Адрес: ул. Мештер Маноле 20, Кишинёв, Молдова</p>
+    </section>
 </body>
 </html>
