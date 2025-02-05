@@ -1,105 +1,112 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Зеркала с подсветкой MiroLED - каталог товаров, галерея работ, калькулятор стоимости.">
-    <title>MiroLED - Зеркала с подсветкой</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div id="preloader">
-        <video autoplay muted playsinline>
-            <source src="media/20250131_2202_MiroLED Neon Glow_simple_compose_01jjyzaa3nf0tb2tdmjs7aeqm4.mp4" type="video/mp4">
-        </video>
-    </div>
-    
-    <header>
-        <h1>MiroLED - Зеркала с подсветкой</h1>
-        <nav>
-            <ul>
-                <li><a href="#catalog">Каталог</a></li>
-                <li><a href="#gallery">Галерея</a></li>
-                <li><a href="#calculator">Калькулятор</a></li>
-                <li><a href="#contact">Контакты</a></li>
-                <li>
-                    <select id="language-select">
-                        <option value="ru">Рус</option>
-                        <option value="ro">Rom</option>
-                        <option value="en">Eng</option>
-                    </select>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="catalog">
-        <h2>Каталог товаров</h2>
-        <div id="filters">
-            <label for="shape">Форма:</label>
-            <select id="shape">
-                <option value="all">Все</option>
-                <option value="rectangle">Прямоугольные</option>
-                <option value="round">Круглые</option>
-                <option value="oval">Овальные</option>
-            </select>
-        </div>
-        <div class="catalog-container">
-            <div class="product" data-shape="round">
-                <img src="media/MiroLED Aura Round.jpg" alt="MiroLED Aura Round">
-                <h3>Aura Round</h3>
-            </div>
-            <div class="product" data-shape="rectangle">
-                <img src="media/MiroLED Aura Vega.jpg" alt="MiroLED Aura Vega">
-                <h3>Aura Vega</h3>
-            </div>
-            <div class="product" data-shape="round">
-                <img src="media/MiroLED Eclipse Round.jpg" alt="MiroLED Eclipse Round">
-                <h3>Eclipse Round</h3>
-            </div>
-            <div class="product" data-shape="oval">
-                <img src="media/Elara 1000x600.jpg" alt="Elara">
-                <h3>Elara</h3>
-            </div>
-        </div>
-    </section>
-    
-    <section id="gallery">
-        <h2>Галерея работ</h2>
-        <div class="gallery-container">
-            <h3>Прямые зеркала</h3>
-            <img src="media/Aura 1000x800.jpg" alt="Aura 1000x800">
-            <img src="media/Vega.jpg" alt="Vega">
-            <h3>Фигурные зеркала</h3>
-            <img src="media/Mist.jpg" alt="Mist">
-            <img src="media/MiroLED Mist Vega.jpg" alt="MiroLED Mist Vega">
-        </div>
-    </section>
-    
-    <section id="calculator">
-        <h2>Калькулятор стоимости</h2>
-        <p>Выберите параметры зеркала:</p>
-        <form id="price-calculator">
-            <label>Размер (см): <input type="number" id="size" min="30" max="200" step="5"></label>
-            <label>Подсветка:
-                <select id="lighting">
-                    <option value="none">Без подсветки</option>
-                    <option value="back">Задняя</option>
-                    <option value="front">Лицевая</option>
-                    <option value="dual">Двойная</option>
-                </select>
-            </label>
-            <button type="button" onclick="calculatePrice()">Рассчитать</button>
-            <p id="price-result">Цена: -</p>
-        </form>
-    </section>
-    
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Email: miroled.info@gmail.com</p>
-        <p>Телефон: +37368939303</p>
-        <p>Адрес: ул. Мештер Маноле 20, Кишинёв, Молдова</p>
-    </section>
-</body>
-</html>
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Видеозаставка */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#splash-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Шапка */
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Главная страница */
+section {
+    padding: 50px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Категории зеркал */
+.category {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category a {
+    padding: 15px 25px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.category a:hover {
+    background: #0056b3;
+}
