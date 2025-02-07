@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -67,6 +68,34 @@ nav ul li a:hover {
 
 .product:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.lazy-load {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #1EBE5D;
 }
 
 .fade-in {
