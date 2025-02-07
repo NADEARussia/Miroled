@@ -56,9 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animateElements();
 
+    const lazyImages = document.querySelectorAll(".lazy-load");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+                entry.target.classList.add("loaded");
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        observer.observe(img);
+    });
+
     window.calculatePrice = function(id) {
         let size = document.getElementById(`size${id}`).value;
         let price = size * 10; // Примерная цена за см
         document.getElementById(`price${id}`).textContent = `Цена: ${price} MDL`;
     };
+
+    const whatsappButton = document.createElement("a");
+    whatsappButton.href = "https://wa.me/37368939303";
+    whatsappButton.classList.add("whatsapp-button");
+    whatsappButton.textContent = "💬 WhatsApp";
+    document.body.appendChild(whatsappButton);
 });
