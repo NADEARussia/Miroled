@@ -7,36 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const translations = {
-        ru: {
-            home: "Главная",
-            gallery: "Галерея работ",
-            about: "О нас",
-            contact: "Контакты",
-            welcome: "Добро пожаловать в MiroLED",
-            description: "Мы создаем стильные и современные зеркала с подсветкой.",
-            about_description: "Мы разрабатываем зеркала с подсветкой, дополняющие интерьер."
-        },
-        ro: {
-            home: "Acasă",
-            gallery: "Galerie de lucrări",
-            about: "Despre noi",
-            contact: "Contacte",
-            welcome: "Bine ați venit la MiroLED",
-            description: "Creăm oglinzi moderne și elegante cu iluminare.",
-            about_description: "Dezvoltăm oglinzi cu iluminare care completează interiorul."
-        },
-        en: {
-            home: "Home",
-            gallery: "Gallery",
-            about: "About Us",
-            contact: "Contact",
-            welcome: "Welcome to MiroLED",
-            description: "We create stylish and modern mirrors with lighting.",
-            about_description: "We develop illuminated mirrors that complement the interior."
-        }
-    };
-
     window.openModal = function(imageSrc, description) {
         document.getElementById("modal-img").src = imageSrc;
         document.getElementById("modal-desc").textContent = description;
