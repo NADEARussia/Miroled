@@ -1,93 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiroLED - Стильные зеркала с подсветкой</title>
-    <meta name="description" content="Современные зеркала с подсветкой от MiroLED. Высокое качество, стильный дизайн и индивидуальные решения.">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="fade-in">MiroLED</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#catalog">Каталог</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <video autoplay muted loop id="intro-video">
-            <source src="media/intro.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <h2 class="slide-up">Добро пожаловать в MiroLED</h2>
-        <p class="fade-in">Создаем стильные зеркала с подсветкой для вашего интерьера.</p>
-    </section>
-
-    <section id="catalog">
-        <h2 class="slide-up">Каталог зеркал</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="media/mirrors/mirror1.jpg" alt="Зеркало 1">
-                <h3>Aura Round</h3>
-                <p>Круглое зеркало с лицевой подсветкой.</p>
-                <input type="number" id="size1" placeholder="Размер (см)">
-                <button onclick="calculatePrice(1)">Рассчитать цену</button>
-                <p id="price1"></p>
-            </div>
-            <div class="product">
-                <img src="media/mirrors/mirror2.jpg" alt="Зеркало 2">
-                <h3>Vega</h3>
-                <p>Зеркало с задней подсветкой.</p>
-                <input type="number" id="size2" placeholder="Размер (см)">
-                <button onclick="calculatePrice(2)">Рассчитать цену</button>
-                <p id="price2"></p>
-            </div>
+    <div class="container">
+        <img src="path/to/your/image.jpg" alt="Company Image" class="img-fluid">
+        <div class="info">
+            <h1>Bine ați venit la [Nume Companie]</h1>
+            <p>Suntem o companie dedicată [descriere scurtă a companiei].</p>
+            <p>Misiunea noastră este să [misiunea companiei].</p>
+            <p>Contactați-ne la [email] sau [telefon] pentru mai multe informații.</p>
         </div>
-    </section>
-
-    <section id="about">
-        <h2 class="slide-up">О нас</h2>
-        <p class="fade-in">MiroLED – производитель зеркал с подсветкой, которые создают уют и стиль в вашем интерьере.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2 class="slide-up">Наши работы</h2>
-        <div class="gallery fade-in">
-            <img src="media/portfolio/1.jpg" alt="Проект 1">
-            <img src="media/portfolio/2.jpg" alt="Проект 2">
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="slide-up">Свяжитесь с нами</h2>
-        <p>Телефон: +37368939303</p>
-        <p>Email: miroled.info@gmail.com</p>
-        <form>
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="email" placeholder="Ваш email" required>
-            <textarea placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 MiroLED. Все права защищены.</p>
-    </footer>
-
-    <script>
-        function calculatePrice(id) {
-            let size = document.getElementById(`size${id}`).value;
-            let price = size * 10; // Примерная цена за см
-            document.getElementById(`price${id}`).textContent = `Цена: ${price} MDL`;
-        }
-    </script>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
